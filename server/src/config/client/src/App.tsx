@@ -1,8 +1,9 @@
 import axios from 'axios'
 import React, { useEffect, useReducer } from 'react'
+import { Route, Switch } from 'react-router-dom'
 
 import './App.scss'
-import MessageBanner from './components/MessageBanner'
+import Hero from './components/hero/Hero'
 
 export const baseURL = process.env.REACT_APP_HEROKU_URL || 'http://localhost:5000'
 
@@ -67,14 +68,15 @@ function App() {
 
   return (
     <div className="app">
-      App
       <GlobalContext.Provider
         value={{
           state: welcomeState,
           dispatch: welcomeDispatch
         }}
       >
-        <MessageBanner />
+        <Switch>
+          <Route exact path="/" component={Hero} />
+        </Switch>
       </GlobalContext.Provider>
     </div>
   )

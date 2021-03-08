@@ -17,8 +17,8 @@
 	min-height: 100vh;
 }
 
-$phone: 450px;
-$tablet: 700px;
+$phone: 575px;
+$tablet: 800px;
 
 @mixin small-media {
 	@media screen and (max-width: $phone) { @content };

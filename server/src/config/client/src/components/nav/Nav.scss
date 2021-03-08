@@ -1,0 +1,51 @@
+@import '../../variables.scss';
+
+.nav {
+  @include center-h;
+  justify-content: space-between;
+  padding: 3rem 0 3rem 0;
+  margin-bottom: 2rem;
+  height: 10rem;
+
+  @include small-media {
+    height: 10vh;
+  }
+
+  .nav-icon {
+    animation: FloatUpDown 4s linear infinite;
+    height: 8rem;
+    filter: drop-shadow(rgba(0, 0, 0, 0.3) 0.4rem 0.4rem 0.3rem);
+    margin-right: 2.5rem;
+    margin-left: 2.5rem;
+    opacity: 40%;
+    cursor: pointer;
+    transition: ease 1s all;
+
+    &:hover {
+      opacity: 75%;
+    }
+
+    @include small-media {
+      margin-right: 3.5vw;
+      margin-left: 3.5vw;
+      height: 6vh;
+    }
+  }
+
+  .nav-icon.two {
+    animation-delay: 1s;
+  }
+
+  .nav-icon.three {
+    animation-delay: 2s;
+  }
+
+  @keyframes FloatUpDown {
+    0%, 100% {
+      margin-bottom: 0;
+    }
+    50% {
+      margin-bottom: 5%;
+    }
+  }
+}

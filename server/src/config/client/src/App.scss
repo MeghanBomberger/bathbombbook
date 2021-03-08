@@ -6,14 +6,12 @@
 	box-sizing: border-box;
 };
 
+body {
+	background: linear-gradient(45deg, rgba(255, 125, 255, 0.7), rgba(150, 200, 255, 0.7)), url('./assets/lazy_camera_girl-orEnWh0zdyw-unsplash.jpg');
+	background-size: cover, cover;
+	background-repeat: no-repeat, no-repeat;
+}
+
 .app {
 	@include fill-screen-bottomless;
-	background: url('./assets/thom-milkovic-FTNGfpYCpGM-unsplash.jpg');
-	background-size: cover;
-	background-position: right 70%;
-	background-repeat: no-repeat;
-
-	@include small-media {
-		background-position: 95% bottom;
-	}
 }

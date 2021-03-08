@@ -1,0 +1,17 @@
+@import '../../variables.scss';
+
+.header {
+  height: 100vh;
+  @include center-v;
+
+
+  .logo {
+    height: 60vh;
+    width: auto;
+
+    @include tablet-and-smaller {
+      height: auto;
+      width: 80vw;
+    }
+  }
+}
