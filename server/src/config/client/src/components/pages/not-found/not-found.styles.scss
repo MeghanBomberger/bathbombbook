@@ -1,0 +1,20 @@
+@import '../../../variables.scss';
+
+.not-found {
+  @include center-v;
+
+  h1 {
+    margin: -10rem 0;
+    @include font-primary;
+    font-size: 30rem;
+    color: $white60;
+    filter: drop-shadow($white100 0 0 0.25rem);
+  }
+
+  h2 {
+    @include font-secondary;
+    font-size: 5.75rem;
+    color: $white60;
+    filter: drop-shadow($white100 0 0 0.25rem);
+  }
+}

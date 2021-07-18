@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Pattaya&display=swap');
+
+@mixin font-primary {
+	font-family: 'Pattaya', sans-serif;
+}
+
+@mixin font-secondary {
+	font-family: 'Montserrat', sans-serif;
+}
+
 @mixin center-h {
 	display: flex;
 	align-items: center;
@@ -39,3 +49,25 @@ $tablet: 800px;
 @mixin tablet-and-larger {
 	@media screen and (min-width: $tablet) { @content };
 }
+
+$black100: rgba(0, 0, 0, 1);
+$black90: rgba(0, 0, 0, 0.9);
+$black30: rgba(0, 0, 0, 0.3);
+$black20: rgba(0, 0, 0, 0.2);
+
+$blue100: rgba(76, 0, 255, 1);
+$blue40: rgba(76, 0, 255, 0.4);
+
+$white100: rgba(255, 255, 255, 1);
+$white90: rgba(255, 255, 255, 0.9);
+$white80: rgba(255, 255, 255, 0.8);
+$white70: rgba(255, 255, 255, 0.7);
+$white60: rgba(255, 255, 255, 0.6);
+$white50: rgba(255, 255, 255, 0.5);
+$white40: rgba(255, 255, 255, 0.4);
+$white30: rgba(255, 255, 255, 0.3);
+$white25: rgba(255, 255, 255, 0.25);
+$white20: rgba(255, 255, 255, 0.2);
+$white10: rgba(255, 255, 255, 0.1);
+
+$black30shadow: drop-shadow($black30 0.4rem 0.4rem 0.3rem);

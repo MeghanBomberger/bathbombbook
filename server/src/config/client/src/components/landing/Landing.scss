@@ -1,0 +1,59 @@
+@import '../../variables.scss';
+
+.landing {
+  @include fill-screen-bottomless;
+  @include center-v;
+
+  .big-logo {
+    width: 80vw;
+    max-width: 65rem;
+    filter: drop-shadow(rgba(255, 255, 255, 0.7) 0 0 2rem);
+  }
+
+  .nav {
+    height: 10rem;
+    padding: 3rem 0 3rem 0;
+    margin-bottom: 2rem;
+    max-width: 65rem;
+    width: 80vw;
+
+    @include small-media {
+      height: 10vh;
+    }
+
+    .nav-icon {
+      margin-right: 2.5rem;
+      margin-left: 2.5rem;
+      height: 8rem;
+      opacity: 40%;
+      animation: FloatUpDown 4s linear infinite;
+
+      &:hover {
+        opacity: 75%;
+      }
+
+      @include small-media {
+        margin-right: 3.5vw;
+        margin-left: 3.5vw;
+        height: 6vh;
+      }
+    }
+
+    .nav-icon.two {
+      animation-delay: 1s;
+    }
+
+    .nav-icon.three {
+      animation-delay: 2s;
+    }
+
+    @keyframes FloatUpDown {
+      0%, 100% {
+        margin-bottom: 0;
+      }
+      50% {
+        margin-bottom: 5%;
+      }
+    }
+  }
+}

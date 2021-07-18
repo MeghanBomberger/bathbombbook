@@ -29,7 +29,11 @@ const navIcons = [
   }
 ]
 
-export default function Nav() {
+interface NavPropTypes {
+  hover?: boolean
+}
+
+export default function Nav(props: NavPropTypes) {
   return (
     <nav className="nav">
       {navIcons.map((icon, i) => (
@@ -43,7 +47,7 @@ export default function Nav() {
             src={icon.icon}
             title={icon.name}
             style={{
-              marginTop: i % 2 === 0 ? 0 : '3rem'
+              marginTop: props.hover && i % 2 !== 0 ? '3rem' : 0
             }}
           />
         </Link>

@@ -1,0 +1,31 @@
+@import '../../variables.scss';
+
+
+.header {
+  position: fixed;
+  top:0;
+  right: 1.5rem;
+  left: 1.5rem;
+  @include center-h;
+  justify-content: space-between;
+  height: auto;
+  padding: 1rem 0 1rem 0;
+  border-bottom: $white40 solid 0.35rem;
+
+  a {
+    .logo {
+      height: 4rem;
+      width: auto;
+      filter: $black30shadow;
+    }
+  }
+
+  h1 {
+    position: absolute;
+    left: 6.5rem;
+    @include font-primary;
+    font-size: 3.25rem;
+    color: $white100;
+    filter: $black30shadow;
+  }
+}

@@ -5,6 +5,8 @@ import express from 'express'
 import path from 'path'
 import serveStatic from 'serve-static'
 
+import { ingredientRouter } from './routers/IngredientsRouter'
+
 const app = express()
 
 const options: cors.CorsOptions = {
@@ -24,6 +26,8 @@ const options: cors.CorsOptions = {
 app.use(express.json())
 app.use(cors(options))
 app.use(serveStatic(__dirname + '/client/build'))
+
+app.use('/api/ingredients', ingredientRouter)
 
 app.get("/api/hello", (req, res) => {
   res.send({ message: "Hello World!" })
